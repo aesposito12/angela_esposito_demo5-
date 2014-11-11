@@ -193,6 +193,9 @@ $padding: 6px;
 .no-bottom-gutter [class^="col-"] {
     margin-bottom: 0;
 }
+.outer .no-bottom-gutter{
+margin-bottom: 0;
+}
 
 .outer {
     width: 100%;
@@ -209,9 +212,8 @@ $padding: 6px;
 }
 
 .row.padding [class^="col-"],
-.row-no-gutter.paddimg[class^="col-"],
-[class^="col-"].padding
-{
+.row-no-gutter.padding [class^="col-"],
+[class^="col-"].padding {
     box-sizing: border-box;
     padding: $padding;
 }
@@ -237,7 +239,21 @@ $padding: 6px;
     box-align: center;
 }
 
-.fixed{
-position: fixed;
-width:100%;
+.text-right{
+text-align:right;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+}
+
+@media screen and (max-width: $tablet){
+.row .fixed-nav{
+    position:absolute;
+    top:0;
+}
+}
+.fixed-clear{
+padding-top: $gutter;
 }
